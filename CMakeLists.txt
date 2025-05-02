@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION "3.11" FATAL_ERROR)
+cmake_minimum_required(VERSION "3.28" FATAL_ERROR)
 set(CMAKE_OSX_DEPLOYMENT_TARGET "10.13" CACHE STRING "Minimum MacOS version" FORCE)
 #set(CMAKE_Swift_LANGUAGE_VERSION 5)
 project(SDL3Swift LANGUAGES C OBJC Swift)
@@ -16,8 +16,7 @@ else()
 endif()
 
 function (sdl3swift_xcode_properties target)
-  get_property(_is_framework TARGET ${target} PROPERTY FRAMEWORK)
-  if (_is_framework)
+  if ("${SDL3}" MATCHES "xcframework")
     set_target_properties(${target} PROPERTIES
       XCODE_EMBED_FRAMEWORKS "${SDL3}"
       XCODE_EMBED_FRAMEWORKS_REMOVE_HEADERS_ON_COPY YES
@@ -25,14 +24,6 @@ function (sdl3swift_xcode_properties target)
   endif()
 endfunction()
 
-if (CMAKE_VERSION VERSION_LESS "3.21")
-  get_property(_not_top_level DIRECTORY PROPERTY PARENT_DIRECTORY)
-  if (_not_top_level)
-    set(PROJECT_IS_TOP_LEVEL OFF)
-  else()
-    set(PROJECT_IS_TOP_LEVEL ON)
-  endif()
-endif()
 option(BUILD_EXAMPLES "Build example programs" ${PROJECT_IS_TOP_LEVEL})
 
 add_subdirectory(Sources/SDLSwift)
