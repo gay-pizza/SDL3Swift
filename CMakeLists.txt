@@ -6,7 +6,7 @@ if (CMAKE_OSX_DEPLOYMENT_TARGET VERSION_LESS "10.13")
   set(CMAKE_OSX_DEPLOYMENT_TARGET "10.13" CACHE STRING "Minimum MacOS version" FORCE)
 endif()
 #set(CMAKE_Swift_LANGUAGE_VERSION 5)
-project(SDL3Swift LANGUAGES C OBJC Swift)
+project(SDL3Swift LANGUAGES C Swift)
 
 set(_apple_platforms "Darwin;iOS;tvOS;visionOS;watchOS")
 if (CMAKE_SYSTEM_NAME IN_LIST _apple_platforms)
