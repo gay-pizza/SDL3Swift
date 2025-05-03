@@ -1,4 +1,4 @@
-// swift-tools-version: 6.1
+// swift-tools-version: 6.0
 
 import PackageDescription
 
@@ -15,16 +15,13 @@ let package = Package(
         .target(
           name: "SDLFramework",
           condition: .when(platforms: [ .macOS ])),
-        /*
         .target(
           name: "CSDL3",
           condition: .when(platforms: [ .linux, .windows ])),
-        */
       ]),
     .binaryTarget(
       name: "SDLFramework",
       path: "Frameworks/SDL3.xcframework"),
-    /*
     .systemLibrary(
       name: "CSDL3",
       pkgConfig: "sdl3",
@@ -32,7 +29,6 @@ let package = Package(
         .aptItem([ "libsdl3-dev" ]),
         .yumItem([ "SDL3-devel" ]),
       ]),
-    */
     .executableTarget(
       name: "Minimal",
       dependencies: [ "SDL3" ],
