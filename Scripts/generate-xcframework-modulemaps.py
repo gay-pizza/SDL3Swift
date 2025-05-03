@@ -6,6 +6,7 @@ import re
 import sys
 from pathlib import Path
 import plistlib
+from generate_sdl3_shim import generate_shim
 
 
 def main():
@@ -29,21 +30,8 @@ def main():
 
     # Generate shim.h for Swift
     with headers.joinpath("shim.h").open("w") as shim:
-      shim.writelines([
-        "#pragma once\n\n",
-        "#include <SDL3/SDL.h>\n"])
-      for h in sorted(headers.glob("**/*.h")):
-        with h.open("r") as hf:
-          has_matches = False
-          for line in hf:
-            m = sdl_uint64c_pattern.match(line)
-            if m is not None:
-              if not has_matches:
-                shim.write(f"\n/* {h.name} */\n")
-                has_matches = True
-              shim.writelines([
-                f"#undef {m.group(1)}\n",
-                f"#define {m.group(1)} {m.group(2)}ul  /*{m.group(3)}*/\n"])
+      shim.write("#pragma once\n\n")
+      generate_shim(shim, headers)
 
     # Create modules folder in framework
     modules.mkdir(exist_ok=True)
