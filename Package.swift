@@ -34,5 +34,10 @@ let package = Package(
       dependencies: [ "SDL3" ],
       path: "Sources/Examples/Minimal",
       exclude: [ "CMakeLists.txt" ]),
+    .executableTarget(
+      name: "GPUClear",
+      dependencies: [ "SDL3" ],
+      path: "Sources/Examples/GPUClear",
+      exclude: [ "CMakeLists.txt" ]),
   ]
 )

@@ -35,4 +35,5 @@ add_subdirectory(Sources/SDLSwift)
 
 if (BUILD_EXAMPLES)
   add_subdirectory(Sources/Examples/Minimal)
+  add_subdirectory(Sources/Examples/GPUClear)
 endif()
