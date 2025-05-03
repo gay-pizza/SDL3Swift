@@ -1,5 +1,10 @@
 cmake_minimum_required(VERSION "3.28" FATAL_ERROR)
-set(CMAKE_OSX_DEPLOYMENT_TARGET "10.13" CACHE STRING "Minimum MacOS version" FORCE)
+# HACK: This should only really ever be set if we're the top level project,
+#       but CMAKE_OSX_DEPLOYMENT_TARGET needs to be set before project() is
+#       called, so we can't check PROJECT_IS_TOP_LEVEL yet, c'est la vie.
+if (CMAKE_OSX_DEPLOYMENT_TARGET VERSION_LESS "10.13")
+  set(CMAKE_OSX_DEPLOYMENT_TARGET "10.13" CACHE STRING "Minimum MacOS version" FORCE)
+endif()
 #set(CMAKE_Swift_LANGUAGE_VERSION 5)
 project(SDL3Swift LANGUAGES C OBJC Swift)
 
