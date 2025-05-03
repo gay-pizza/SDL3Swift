@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: (C) 2025 Gay Pizza Specifications <gay.pizza>
+# SPDX-License-Identifier: Zlib OR 0BSD
 
 import sys
 from pathlib import Path
