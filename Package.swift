@@ -19,6 +19,9 @@ let package = Package(
           name: "CSDL3",
           condition: .when(platforms: [ .linux, .windows ])),
       ]),
+    .testTarget(
+      name: "SDLTests",
+      dependencies: [ "SDL3" ]),
     .binaryTarget(
       name: "SDLFramework",
       path: "Frameworks/SDL3.xcframework"),
