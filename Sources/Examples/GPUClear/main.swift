@@ -4,6 +4,12 @@
 import SDL3
 import Foundation
 
+print("Compiled version: \(SDL_MAJOR_VERSION).\(SDL_MINOR_VERSION).\(SDL_MICRO_VERSION)")
+print("Linked version:   \(SDL_VERSIONNUM_MAJOR(SDL_GetVersion())).\(SDL_VERSIONNUM_MINOR(SDL_GetVersion())).\(SDL_VERSIONNUM_MICRO(SDL_GetVersion()))")
+guard SDL_GetVersion() >= SDL_VERSION else {
+  exit(1)
+}
+
 // Initialise SDL
 guard SDL_Init(SDL_INIT_VIDEO) else {
   fatalError("SDL_Init(): \(String(cString: SDL_GetError()))")
