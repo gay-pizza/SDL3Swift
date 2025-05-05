@@ -18,6 +18,12 @@ let package = Package(
         .target(
           name: "CSDL3",
           condition: .when(platforms: [ .linux, .windows ])),
+      ],
+      path: "Sources/SDLSwift",
+      exclude: [
+        "CMakeLists.txt",
+        "module.modulemap",
+        "shim.h",
       ]),
     .testTarget(
       name: "SDLTests",

@@ -7,5 +7,5 @@ target_include_directories(SDLSwift INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}")
 target_link_libraries(SDLSwift INTERFACE SDL3::SDL3)
 
 target_sources(SDLSwift INTERFACE
-  ../SDL3/SDL3.swift
-  ../SDL3/SDL_Version.swift)
+  SDL3.swift
+  SDL_Version.swift)
