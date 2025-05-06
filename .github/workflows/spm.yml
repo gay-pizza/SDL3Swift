@@ -1,0 +1,45 @@
+name: Swift Package
+
+on: [ push ]
+#    paths:
+#    - "Package.swift"
+#    - "**.swift"
+#    - "Sources/CSDL3/**"
+#    - "Frameworks/**"
+#  pull_request:
+#    branches: [ "main" ]
+#    paths:
+#    - "Package.swift"
+#    - "**.swift"
+#    - "Sources/CSDL3/**"
+#    - "Frameworks/**"
+
+jobs:
+  build:
+    name: Swift Package - ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+        - macos-latest
+        - ubuntu-latest
+
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install Swift
+      uses: swift-actions/setup-swift@v2
+
+    - name: Install SDL3 (Ubuntu)
+      if: ${{ startsWith(matrix.os, 'ubuntu') }}
+      uses: libsdl-org/setup-sdl@main
+      with:
+        install-linux-dependencies: true
+        version: sdl3-latest
+        cmake-generator: Ninja
+
+    - name: Build
+      run: swift build
+
+    - name: Run tests
+      run: swift test
