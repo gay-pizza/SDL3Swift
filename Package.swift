@@ -3,14 +3,14 @@
 import PackageDescription
 
 let package = Package(
-  name: "SDL3",
+  name: "SDL3Swift",
   platforms: [ .macOS(.v10_13), .iOS(.v12), .tvOS(.v12) ],
   products: [
-    .library(name: "SDL3", targets: [ "SDL3" ]),
+    .library(name: "SDLSwift", targets: [ "SDLSwift" ]),
   ],
   targets: [
     .target(
-      name: "SDL3",
+      name: "SDLSwift",
       dependencies: [
         .target(
           name: "SDLFramework",
@@ -19,7 +19,6 @@ let package = Package(
           name: "CSDL3",
           condition: .when(platforms: [ .linux, .windows ])),
       ],
-      path: "Sources/SDLSwift",
       exclude: [
         "CMakeLists.txt",
         "module.modulemap",
@@ -27,7 +26,7 @@ let package = Package(
       ]),
     .testTarget(
       name: "SDLTests",
-      dependencies: [ "SDL3" ]),
+      dependencies: [ "SDLSwift" ]),
     .binaryTarget(
       name: "SDLFramework",
       path: "Frameworks/SDL3.xcframework"),
@@ -40,12 +39,12 @@ let package = Package(
       ]),
     .executableTarget(
       name: "Minimal",
-      dependencies: [ "SDL3" ],
+      dependencies: [ "SDLSwift" ],
       path: "Sources/Examples/Minimal",
       exclude: [ "CMakeLists.txt" ]),
     .executableTarget(
       name: "GPUClear",
-      dependencies: [ "SDL3" ],
+      dependencies: [ "SDLSwift" ],
       path: "Sources/Examples/GPUClear",
       exclude: [ "CMakeLists.txt" ]),
   ]

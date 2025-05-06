@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: (C) 2025 Gay Pizza Specifications <gay.pizza>
 // SPDX-License-Identifier: Zlib OR 0BSD
 
-import SDL3
+import SDLSwift
 
 guard SDL_Init(SDL_INIT_VIDEO) else {
   fatalError("SDL_Init(): \(String(cString: SDL_GetError()))")

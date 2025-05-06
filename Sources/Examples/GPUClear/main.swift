@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: (C) 2025 Gay Pizza Specifications <gay.pizza>
 // SPDX-License-Identifier: Zlib OR 0BSD
 
-import SDL3
+import SDLSwift
 import Foundation
 
 print("Compiled version: \(SDL_MAJOR_VERSION).\(SDL_MINOR_VERSION).\(SDL_MICRO_VERSION)")

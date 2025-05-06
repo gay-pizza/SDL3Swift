@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Zlib OR 0BSD
 
 import Testing
-@testable import SDL3
+@testable import SDLSwift
 
 @Test func testVersion() {
   let dynamic = SDL_GetVersion()
