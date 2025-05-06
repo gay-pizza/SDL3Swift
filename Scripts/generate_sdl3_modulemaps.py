@@ -35,8 +35,8 @@ def generate_shims_modulemaps(xcframework: Path):
       symlink.symlink_to("Versions/Current/Modules")
 
     # Generate module.modulemap for framework
-    with modules.joinpath("module.modulemap").open("w") as map:
-      map.writelines([
+    with modules.joinpath("module.modulemap").open("w") as modmap:
+      modmap.writelines([
         "framework module SDL3 [extern_c] {\n",
         "    header \"shim.h\"\n",
         "    export *\n",

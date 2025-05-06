@@ -23,9 +23,10 @@ def build(release_ver: str):
     try:
       url = f"https://github.com/libsdl-org/SDL/releases/download/release-{ver}/SDL3-{ver}.dmg"
       print("Downloading:", url, file=sys.stderr)
-      fp.write(urllib.request.urlopen(url).read())
+      with urllib.request.urlopen(url) as response:
+        fp.write(response.read())
     except urllib.error.URLError as e:
-      exit(e)
+      sys.exit(str(e))
 
     # Mount DMG at '/Volumes/SDL3'
     subprocess.run(["hdiutil", "attach", fp.name], check=True)

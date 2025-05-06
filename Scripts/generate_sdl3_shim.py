@@ -58,7 +58,7 @@ def generate_wrapper(wrapper: Path, headers: Path):
         out.write(f"\n/* {line.name} */\n")
       elif isinstance(line, HeaderUInt64C):
         out.writelines([
-          f"/// {line.docstring.removeprefix("*<").strip()}\n"
+          f"/// {line.docstring.removeprefix('*<').strip()}\n"
           f"let {line.name}: UInt64 = {line.value}\n"])
 
 
