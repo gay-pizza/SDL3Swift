@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Zlib OR 0BSD
 
 import XCTest
-@testable import SDL3
+@testable import SDLSwift
 
 final class TestAvailability: XCTestCase {
   func testAPIAvailability() {
