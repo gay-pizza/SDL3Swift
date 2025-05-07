@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/SDL.h</key>
 		<data>
-		gJjJHwwgunZxeWeclE8br2kYvVY=
+		0N47Y424MtQtqiD02s+D4y/7Rc8=
 		</data>
 		<key>Headers/SDL_assert.h</key>
 		<data>
@@ -82,7 +82,7 @@
 		</data>
 		<key>Headers/SDL_events.h</key>
 		<data>
-		p7lc1z4e3hZj/CRZzW5soXYFKRQ=
+		lhihIBXL+L+ykQezT7seSFWerMA=
 		</data>
 		<key>Headers/SDL_filesystem.h</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Headers/SDL_gpu.h</key>
 		<data>
-		4l866Pxpk+/VOp51v4fJVsK0SrI=
+		FBd4yKXV/Adj1xRJ5xEimaqDb7A=
 		</data>
 		<key>Headers/SDL_guid.h</key>
 		<data>
@@ -110,7 +110,7 @@
 		</data>
 		<key>Headers/SDL_hints.h</key>
 		<data>
-		QihIqVYlAzHdUswj8e/+iP4cDkM=
+		IOopVBn7pJrWjRU5y1A1W5tliQ4=
 		</data>
 		<key>Headers/SDL_init.h</key>
 		<data>
@@ -246,11 +246,11 @@
 		</data>
 		<key>Headers/SDL_render.h</key>
 		<data>
-		G5gedcckAxZKp/klLUeT956TQ4w=
+		2tJntukL2CUJsQnzN0UZxrlGZzQ=
 		</data>
 		<key>Headers/SDL_revision.h</key>
 		<data>
-		toP5O1hSFAPs52gFb5Wegy3Viw0=
+		K35kWgGi1VSfT4THHwc0U0kf/vc=
 		</data>
 		<key>Headers/SDL_scancode.h</key>
 		<data>
@@ -262,7 +262,7 @@
 		</data>
 		<key>Headers/SDL_stdinc.h</key>
 		<data>
-		nmbamEH9ChuJ9074eyqafmmVIGI=
+		AYu64nt6uXwk8ZbPKGM8jSb5W4g=
 		</data>
 		<key>Headers/SDL_storage.h</key>
 		<data>
@@ -270,7 +270,7 @@
 		</data>
 		<key>Headers/SDL_surface.h</key>
 		<data>
-		QGIGClmwyvIWtPt0H5Niw2BUX7E=
+		zOa6cNv3Xxs2kN1gv5UEdnFKmVU=
 		</data>
 		<key>Headers/SDL_system.h</key>
 		<data>
@@ -298,11 +298,11 @@
 		</data>
 		<key>Headers/SDL_version.h</key>
 		<data>
-		cU3fzHfgF8gV32P0fq6phEPCTcs=
+		Sji2NSelxKf73nT8eNLx/BYqSbQ=
 		</data>
 		<key>Headers/SDL_video.h</key>
 		<data>
-		irhtLqDbGK/7KCNTI2B3h3FCMps=
+		rXINFthz6mRvUcb/ZrxVIibdS0c=
 		</data>
 		<key>Headers/SDL_vulkan.h</key>
 		<data>
@@ -314,7 +314,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		s+AgD22w9RxpMW3qZ7dQCqxZhlg=
+		g3MCvKVrqZk4H53rz5qJEkStEcg=
 		</data>
 		<key>LICENSE.txt</key>
 		<data>
@@ -349,7 +349,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AJ6oqfPiKFf1JVQYjcga+o8qJB7zCkCQ5hoMfLutTbk=
+			CT5aEQEyxerOI2CEjc+E9Hw+OzTo41V1OK3V/tyRYSc=
 			</data>
 		</dict>
 		<key>Headers/SDL_assert.h</key>
@@ -468,7 +468,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZhDJAtRPBLnxKuwtcVPiV0jt9DNks3x+JDoaiTN1WvE=
+			ilhuR8Rl0tkJGmKtszG4Su88IRTbLtO3SgpMafptuas=
 			</data>
 		</dict>
 		<key>Headers/SDL_filesystem.h</key>
@@ -489,7 +489,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iqCB8prVrHA6hGio6aZ1SWOMtz5ls1OKWq9PAqVA/HQ=
+			fWy5KNIyGY07pj5JvltcBas9aLabA1vX2L/Q+KOpENg=
 			</data>
 		</dict>
 		<key>Headers/SDL_guid.h</key>
@@ -517,7 +517,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qp2uGEmgFVVu/VERylXc+9JyowMfqim7W2+JrBKbX5k=
+			IQm7eD2uGEj5j4ybIDM/UQfQPE/4jFD8UYsngV1v6w8=
 			</data>
 		</dict>
 		<key>Headers/SDL_init.h</key>
@@ -755,14 +755,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			flq/afkNKbtDqQXiRQiA1jM0tKr9GiCgVvPhLAK8Uic=
+			xgrnZk3ugjRZkSwbRT0Hqoh2Pxt8TlzImnvlFVyYCwM=
 			</data>
 		</dict>
 		<key>Headers/SDL_revision.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cuA9SB6SwN9MQqVAPdK//Z9vevm5GLwfs5VcHP2qRec=
+			wbmsni4N8bbkJprqjU+M1MBIFaFjGGR4godN7UDGawM=
 			</data>
 		</dict>
 		<key>Headers/SDL_scancode.h</key>
@@ -783,7 +783,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			P3br4cyYfow2JfNF78+I3q3XXXlC4kHLvFYgssqNN70=
+			8UZ1ad8Ea+ZbPGYkkTYsXwrYHQKzbc0KcqVrgeZ3VAo=
 			</data>
 		</dict>
 		<key>Headers/SDL_storage.h</key>
@@ -797,7 +797,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rbTLc7WK+9VqqbyJJ98TgHBJcK4xONHR21CcohTV9Mc=
+			Ps45jar0SB/Q5BDWKFnOAXcS20hnRQgP7bOcIL1e/cI=
 			</data>
 		</dict>
 		<key>Headers/SDL_system.h</key>
@@ -846,14 +846,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z1DAoeu6jJJ4ZIDdAQar+XOkC3S7huCvXdk3Z9/yCJs=
+			4jmTu09iAGG62UdeDRyYBBp3jokCnbGCAFDNtbB1dLg=
 			</data>
 		</dict>
 		<key>Headers/SDL_video.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yb5Cg96tQZZ0ErDNn2e33TSvsXYbcUYgShi8M3jkjHk=
+			ciObw3jWmuZ3t5KSG/RI9J8xNwtNUAHCZ/iGzcaUwWE=
 			</data>
 		</dict>
 		<key>Headers/SDL_vulkan.h</key>
