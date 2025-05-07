@@ -1,18 +1,19 @@
 name: Swift Package
 
-on: [ push ]
-#    paths:
-#    - "Package.swift"
-#    - "**.swift"
-#    - "Sources/CSDL3/**"
-#    - "Frameworks/**"
-#  pull_request:
-#    branches: [ "main" ]
-#    paths:
-#    - "Package.swift"
-#    - "**.swift"
-#    - "Sources/CSDL3/**"
-#    - "Frameworks/**"
+on:
+  push:
+    paths:
+    - "Package.swift"
+    - "**.swift"
+    - "Sources/CSDL3/**"
+    - "Frameworks/**"
+  pull_request:
+    branches: [ "main" ]
+    paths:
+    - "Package.swift"
+    - "**.swift"
+    - "Sources/CSDL3/**"
+    - "Frameworks/**"
 
 jobs:
   build:
