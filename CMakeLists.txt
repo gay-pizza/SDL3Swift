@@ -8,8 +8,11 @@ endif()
 #set(CMAKE_Swift_LANGUAGE_VERSION 5)
 project(SDL3Swift LANGUAGES C Swift)
 
+option(USE_BUNDLED_FRAMEWORK "Link against the bundled SDL3.xcframework (Apple-only)" ${APPLE})
+option(BUILD_EXAMPLES "Build example programs" ${PROJECT_IS_TOP_LEVEL})
+
 set(_apple_platforms "Darwin;iOS;tvOS;visionOS;watchOS")
-if (CMAKE_SYSTEM_NAME IN_LIST _apple_platforms)
+if (USE_BUNDLED_FRAMEWORK AND CMAKE_SYSTEM_NAME IN_LIST _apple_platforms)
   find_library(SDL3 SDL3 REQUIRED PATHS "${CMAKE_CURRENT_SOURCE_DIR}/Frameworks" NO_DEFAULT_PATH)
   add_library(SDL3::SDL3 SHARED IMPORTED)
   set_target_properties(SDL3::SDL3 PROPERTIES
@@ -28,8 +31,6 @@ function (sdl3swift_xcode_properties target)
       XCODE_EMBED_FRAMEWORKS_CODE_SIGN_ON_COPY YES)
   endif()
 endfunction()
-
-option(BUILD_EXAMPLES "Build example programs" ${PROJECT_IS_TOP_LEVEL})
 
 add_subdirectory(Sources/SDLSwift)
 
