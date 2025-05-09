@@ -7,3 +7,4 @@ DerivedData/
 .swiftpm/
 .netrc
 .idea/
+__pycache__/
