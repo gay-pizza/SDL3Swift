@@ -1,19 +1,19 @@
 name: CMake
 
-on: [ push ]
-#  push:
-#    paths:
-#    - "**/CMakeLists.txt"
-#    - "**.swift"
-#    - "Sources/SDLSwift/**"
-#    - "Frameworks/**"
-#  pull_request:
-#    branches: [ "main" ]
-#    paths:
-#    - "**/CMakeLists.txt"
-#    - "**.swift"
-#    - "Sources/SDLSwift/**"
-#    - "Frameworks/**"
+on:
+  push:
+    paths:
+    - "**/CMakeLists.txt"
+    - "Sources/SDLSwift/**"
+    - "Sources/Examples/**/*.swift"
+    - "Frameworks/**"
+  pull_request:
+    branches: [ "main" ]
+    paths:
+    - "**/CMakeLists.txt"
+    - "Sources/SDLSwift/**"
+    - "Sources/Examples/**/*.swift"
+    - "Frameworks/**"
 
 env:
   BUILD_TYPE: "RelWithDebInfo"
