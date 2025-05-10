@@ -14,14 +14,14 @@ option(BUILD_EXAMPLES "Build example programs" ${PROJECT_IS_TOP_LEVEL})
 if (USE_BUNDLED_FRAMEWORK)
   set(_apple_platforms "Darwin;iOS;tvOS;visionOS;watchOS")
   if (CMAKE_SYSTEM_NAME IN_LIST _apple_platforms)
-	find_library(SDL3 SDL3 REQUIRED PATHS "${CMAKE_CURRENT_SOURCE_DIR}/Frameworks" NO_DEFAULT_PATH)
-	add_library(SDL3::SDL3 SHARED IMPORTED)
-	set_target_properties(SDL3::SDL3 PROPERTIES
-	  FRAMEWORK ON
-	  IMPORTED_LOCATION "${SDL3}"
-	  BUILD_RPATH "@loader_path/../Frameworks")
+    find_library(SDL3 SDL3 REQUIRED PATHS "${CMAKE_CURRENT_SOURCE_DIR}/Frameworks" NO_DEFAULT_PATH)
+    add_library(SDL3::SDL3 SHARED IMPORTED)
+    set_target_properties(SDL3::SDL3 PROPERTIES
+      FRAMEWORK ON
+      IMPORTED_LOCATION "${SDL3}"
+      BUILD_RPATH "@loader_path/../Frameworks")
   else()
-	message(FATAL_ERROR "Bundled `SDL3.xcframework` cannot be used on `${CMAKE_SYSTEM_NAME}`.")
+    message(FATAL_ERROR "Bundled `SDL3.xcframework` cannot be used on `${CMAKE_SYSTEM_NAME}`.")
   endif()
   unset(_apple_platforms)
 else()
@@ -34,6 +34,13 @@ function (sdl3swift_xcode_properties target)
       XCODE_EMBED_FRAMEWORKS "${SDL3}"
       XCODE_EMBED_FRAMEWORKS_REMOVE_HEADERS_ON_COPY YES
       XCODE_EMBED_FRAMEWORKS_CODE_SIGN_ON_COPY YES)
+  endif()
+endfunction()
+
+function (sdl3swift_windows_copydll target)
+  if (CMAKE_SYSTEM_NAME STREQUAL "Windows")
+  add_custom_command(TARGET ${target} POST_BUILD COMMAND ${CMAKE_COMMAND}
+    ARGS -E copy_if_different $<TARGET_FILE:SDL3::SDL3> $<TARGET_FILE_DIR:${target}>)
   endif()
 endfunction()
 

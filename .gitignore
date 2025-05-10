@@ -1,10 +1,13 @@
 .DS_Store
 /.build
 /build-*/
+/out/
 /Packages
 xcuserdata/
 DerivedData/
 .swiftpm/
 .netrc
 .idea/
+.vs/
+/CMakeSettings.json
 __pycache__/

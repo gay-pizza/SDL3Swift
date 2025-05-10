@@ -8,6 +8,7 @@ target_link_libraries(CSDL3 INTERFACE SDL3::SDL3)
 # Add public wrapper
 add_library(SDLSwift STATIC
   SDL_Version.swift
+  Events/SDL_EventType.swift
   SDL3.swift)
 add_library(SDLSwift::SDL3 ALIAS SDLSwift)
 set_property(TARGET SDLSwift PROPERTY Swift_MODULE_NAME "SDLSwift")
