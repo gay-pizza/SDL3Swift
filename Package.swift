@@ -10,6 +10,13 @@ let csdl3Target: Target
       name: "SDLFramework",
       condition: .when(platforms: [ .macOS, .iOS, .tvOS, .macCatalyst ])),
   ]
+  csdl3Target = .systemLibrary(name: "CSDL3")  // Dummy target
+#else
+  sdl3SwiftDependencies = [
+    .target(
+      name: "CSDL3",
+      condition: .when(platforms: [ .linux, .windows ])),
+  ]
   csdl3Target = .systemLibrary(
     name: "CSDL3",
     pkgConfig: "sdl3",
@@ -17,13 +24,6 @@ let csdl3Target: Target
       .aptItem(["libsdl3-dev"]),
       .yumItem(["SDL3-devel"]),
     ])
-#else
-  sdl3SwiftDependencies = [
-    .target(
-      name: "CSDL3",
-      condition: .when(platforms: [ .linux, .windows ])),
-  ]
-  csdl3Target = .systemLibrary(name: "CSDL3")  // Dummy target
 #endif
 
 let package = Package(
