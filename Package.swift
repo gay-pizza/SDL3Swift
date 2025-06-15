@@ -2,6 +2,30 @@
 
 import PackageDescription
 
+let sdl3SwiftDependencies: [Target.Dependency]
+let csdl3Target: Target
+#if canImport(ObjectiveC)
+  sdl3SwiftDependencies = [
+    .target(
+      name: "SDLFramework",
+      condition: .when(platforms: [ .macOS, .iOS, .tvOS, .macCatalyst ])),
+  ]
+  csdl3Target = .systemLibrary(
+    name: "CSDL3",
+    pkgConfig: "sdl3",
+    providers: [
+      .aptItem(["libsdl3-dev"]),
+      .yumItem(["SDL3-devel"]),
+    ])
+#else
+  sdl3SwiftDependencies = [
+    .target(
+      name: "CSDL3",
+      condition: .when(platforms: [ .linux, .windows ])),
+  ]
+  csdl3Target = .systemLibrary(name: "CSDL3")  // Dummy target
+#endif
+
 let package = Package(
   name: "SDL3Swift",
   platforms: [ .macOS(.v10_13), .iOS(.v12), .tvOS(.v12), .macCatalyst(.v13) ],
@@ -11,14 +35,7 @@ let package = Package(
   targets: [
     .target(
       name: "SDLSwift",
-      dependencies: [
-        .target(
-          name: "SDLFramework",
-          condition: .when(platforms: [ .macOS, .iOS, .tvOS, .macCatalyst ])),
-        .target(
-          name: "CSDL3",
-          condition: .when(platforms: [ .linux, .windows ])),
-      ],
+      dependencies: sdl3SwiftDependencies,
       exclude: [
         "CMakeLists.txt",
         "module.modulemap",
@@ -30,13 +47,7 @@ let package = Package(
     .binaryTarget(
       name: "SDLFramework",
       path: "Frameworks/SDL3.xcframework"),
-    .systemLibrary(
-      name: "CSDL3",
-      pkgConfig: "sdl3",
-      providers: [
-        .aptItem([ "libsdl3-dev" ]),
-        .yumItem([ "SDL3-devel" ]),
-      ]),
+    csdl3Target,
     .executableTarget(
       name: "Minimal",
       dependencies: [ "SDLSwift" ],
