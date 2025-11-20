@@ -18,7 +18,7 @@
 		</data>
 		<key>Resources/Info.plist</key>
 		<data>
-		s6f7lj8Zg07e8JF0pSnWaw+F3Pc=
+		3jdR606WWvnpbU+2TJU5u7UK2rE=
 		</data>
 		<key>Resources/LICENSE.txt</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Resources/default.metallib</key>
 		<data>
-		/n7Rttmv06hDJMXNGqZU4OsO4ow=
+		sW03l3GLB1nLEQTXckJuJeCHOTE=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -39,14 +39,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			smT90bUu7NUsx/xY/e7sn5Q2tRyuzw7IzzTNkM7pS5U=
+			FUSP+GiIYP9t0hAPci+5N77gdtBtrttLqo1Tq/amIRQ=
 			</data>
 		</dict>
 		<key>Headers/SDL_assert.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Egsd/o6tv9pHEyIe0hNb7n7rTO0xThLDsa1S/VWz0/c=
+			LtIbs+0R0d2MNDQAro2knE5awWYoC0viz9yZdoudk8A=
 			</data>
 		</dict>
 		<key>Headers/SDL_asyncio.h</key>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JAfCkcGDjgjzjwk/IjqVfePU7ckqt61Yur+imnAxxig=
+			nfL+V/SrMa6O4cjxFwmOmU/TmD6g5Iq9AUVBtWZBD80=
 			</data>
 		</dict>
 		<key>Headers/SDL_begin_code.h</key>
@@ -95,14 +95,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			s9EmoTc6ncVTtp22vtX6f6Iycd7bqc8O/6RxEHWi6ag=
+			g1g5UGzS/6bA9MgwMcL4r7DIqLWdiUwRjU1BU0n5FXE=
 			</data>
 		</dict>
 		<key>Headers/SDL_clipboard.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nm+rMDYWWqbnVnJ9sg8fShfLgFD1nALxB8KsBdNTuRU=
+			l/w8guMCOKBn6abgjZ7VvVipK2XTDpaP53V9ag73LUk=
 			</data>
 		</dict>
 		<key>Headers/SDL_close_code.h</key>
@@ -144,7 +144,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yMXqdfb/IZaz45jcQnZIH/qbZfg7X5bJgjjQUyKPvHw=
+			jyLEicUHOjA04KHE4FJ0aA1IX0zC0W18IRpgwnMTgLI=
 			</data>
 		</dict>
 		<key>Headers/SDL_error.h</key>
@@ -158,7 +158,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ilhuR8Rl0tkJGmKtszG4Su88IRTbLtO3SgpMafptuas=
+			PazFRekBuoHdw6ON3sBSWnULfZxyVkVt2PJnljYU/aM=
 			</data>
 		</dict>
 		<key>Headers/SDL_filesystem.h</key>
@@ -179,7 +179,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fWy5KNIyGY07pj5JvltcBas9aLabA1vX2L/Q+KOpENg=
+			MHBu0kJ8k6XCF/5opwfGTPl+4RmCbtzXXIBHRrnuOVY=
 			</data>
 		</dict>
 		<key>Headers/SDL_guid.h</key>
@@ -207,7 +207,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vHbmQHG4ehFSeSoBFv7bq/Het5rQlkYSJM7Ln47iJao=
+			J99tiFtCZxheIITpNRUftlW+V8pW7hhvf4ZsW5kN5Ss=
 			</data>
 		</dict>
 		<key>Headers/SDL_init.h</key>
@@ -319,7 +319,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			K0mA/DdrF5+fAYkt6vZ5qNonce+zAecF0f+2ay6eciU=
+			3LzgMSnW3xQE44RqbFEmlDIL2uvj7jILWn3maSFS3hU=
 			</data>
 		</dict>
 		<key>Headers/SDL_oldnames.h</key>
@@ -438,42 +438,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jeGck0FYHHopFvmb2FU5lKLFWMIb006jcqASU53b+3Y=
+			vNw2ZVuxMQe0R2G29gCtcrt/ggYO25SAIv1j1Iw6hWY=
 			</data>
 		</dict>
 		<key>Headers/SDL_render.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xgrnZk3ugjRZkSwbRT0Hqoh2Pxt8TlzImnvlFVyYCwM=
+			4y/Lwy6A0GvWmj02hVvaxBKy0AGVuDpRgUWM7UzTF78=
 			</data>
 		</dict>
 		<key>Headers/SDL_revision.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pXItYJZ3P93X0wVxe5LDycbjt/66nZ1fruuwK65wD9s=
+			gtGuqOQ2LPxVG6AEpCPYxOLsb7Ws1jXnaq1mFYLUFxQ=
 			</data>
 		</dict>
 		<key>Headers/SDL_scancode.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Mz+cUcJxVYNH1PgH1HQ1lms9b/w6rFkgovMaKX/MFfs=
+			BVsEwii4ZFHpfJcmFKdssHhajYad9wuozvmLCpYjVBg=
 			</data>
 		</dict>
 		<key>Headers/SDL_sensor.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hkGEpyGOUWQhmMkuMasy86uqDchGDP1O8OLMic0d45M=
+			BinaIM5cQsTPmxLjw1ukyq6w+3OEG8KiRvzv4mAzDEM=
 			</data>
 		</dict>
 		<key>Headers/SDL_stdinc.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			85CO1MQfWl81J2QkPetxET1HC0gvdyndv3uIoFbZs+A=
+			ermt+FWSX23YTk+osd3PWe8LHHPPNK3XmK2atmFLbuc=
 			</data>
 		</dict>
 		<key>Headers/SDL_storage.h</key>
@@ -536,14 +536,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+1e72lPcmoDXHwWv1WhCQnHVW7dsnT7OI0BElY0Ts4w=
+			KmY4MrYYM0zIc9wy9ciZ/9BnbHxH/SEFOmzUa9jzsKw=
 			</data>
 		</dict>
 		<key>Headers/SDL_video.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uVRxAEcrEzyV65bJhFd4zGM3oSz8ETWnh/QtgqpoUTI=
+			OprPnB9JS0dqulpRXIk8/VWxNsbhjoL05XDQFxgTnrQ=
 			</data>
 		</dict>
 		<key>Headers/SDL_vulkan.h</key>
@@ -578,7 +578,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vNwCAxuhlefwtF/PGFxYN99knJ1HjGfcbqP5PcVMZEs=
+			XDcr2GmmD9l2bOWEX69zEa8yrAILZB/T8lvYUrWR/I8=
 			</data>
 		</dict>
 		<key>Resources/LICENSE.txt</key>
@@ -599,7 +599,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cfZuGQ3DcwZ9KcoVxa3jVp0vsLMJbXysYttqEMHllro=
+			bTe62KWgdTzzyDz67naoh6EUirjYAgX3J31wjlrt6kI=
 			</data>
 		</dict>
 	</dict>
