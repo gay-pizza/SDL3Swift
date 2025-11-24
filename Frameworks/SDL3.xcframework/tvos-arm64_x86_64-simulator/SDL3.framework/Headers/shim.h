@@ -1,6 +1,8 @@
 #pragma once
 
 #include <SDL3/SDL.h>
+#define SDL_MAIN_HANDLED 1
+#include <SDL3/SDL_main.h>
 
 /* SDL_stdinc.h */
 #undef SDL_MAX_UINT64

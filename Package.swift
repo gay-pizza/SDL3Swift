@@ -58,5 +58,10 @@ let package = Package(
       dependencies: [ "SDLSwift" ],
       path: "Sources/Examples/GPUClear",
       exclude: [ "CMakeLists.txt" ]),
+    .executableTarget(
+      name: "AppMainCallbacks",
+      dependencies: [ "SDLSwift" ],
+      path: "Sources/Examples/AppMainCallbacks",
+      exclude: [ "CMakeLists.txt" ]),
   ]
 )

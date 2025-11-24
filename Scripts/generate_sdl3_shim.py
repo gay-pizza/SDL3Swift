@@ -34,7 +34,10 @@ def generate_shim(shim: TextIO | Path, headers: Path):
       generate_shim(f, headers)
       return
 
-  shim.write("#include <SDL3/SDL.h>\n")
+  shim.writelines([
+    "#include <SDL3/SDL.h>\n",
+    "#define SDL_MAIN_HANDLED 1\n",
+    "#include <SDL3/SDL_main.h>\n"])
   for line in foreach_headers(headers):
     if isinstance(line, HeaderSection):
       shim.write(f"\n/* {line.name} */\n")
