@@ -13,7 +13,7 @@ import subprocess
 from generate_sdl3_modulemaps import generate_shims_modulemaps
 
 
-def build(release_ver: str, type: str = "release"):
+def build(release_ver: str, release_type: str = "release"):
   # Find path to target XCFramework
   root = Path(sys.argv[0]).resolve().parent.parent
   xcframework = root / "Frameworks/SDL3.xcframework"
@@ -22,7 +22,7 @@ def build(release_ver: str, type: str = "release"):
   ver = release_ver
   with tempfile.NamedTemporaryFile(suffix=".dmg") as fp:
     try:
-      url = f"https://github.com/libsdl-org/SDL/releases/download/{type}-{ver}/SDL3-{ver}.dmg"
+      url = f"https://github.com/libsdl-org/SDL/releases/download/{release_type}-{ver}/SDL3-{ver}.dmg"
       print("Downloading:", url, file=sys.stderr)
       with urllib.request.urlopen(url) as response:
         fp.write(response.read())
