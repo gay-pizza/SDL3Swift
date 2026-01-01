@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: (C) 2025 Gay Pizza Specifications <gay.pizza>
 # SPDX-License-Identifier: Zlib OR 0BSD
 
+from argparse import ArgumentParser
 import shutil
 import sys
 from pathlib import Path
@@ -12,7 +13,7 @@ import subprocess
 from generate_sdl3_modulemaps import generate_shims_modulemaps
 
 
-def build(release_ver: str):
+def build(release_ver: str, release_type: str = "release"):
   # Find path to target XCFramework
   root = Path(sys.argv[0]).resolve().parent.parent
   xcframework = root / "Frameworks/SDL3.xcframework"
@@ -21,7 +22,7 @@ def build(release_ver: str):
   ver = release_ver
   with tempfile.NamedTemporaryFile(suffix=".dmg") as fp:
     try:
-      url = f"https://github.com/libsdl-org/SDL/releases/download/release-{ver}/SDL3-{ver}.dmg"
+      url = f"https://github.com/libsdl-org/SDL/releases/download/{release_type}-{ver}/SDL3-{ver}.dmg"
       print("Downloading:", url, file=sys.stderr)
       with urllib.request.urlopen(url) as response:
         fp.write(response.read())
@@ -47,7 +48,8 @@ def build(release_ver: str):
 
 
 if __name__ == "__main__":
-  if len(sys.argv) != 2:
-    print(f"Usage: ./{Path(sys.argv[0]).name} <version>", file=sys.stderr)
-  else:
-    build(sys.argv[1])
+  p = ArgumentParser(description="Fetch the latest SDL xcframework and regenerate modulemaps & shims.")
+  p.add_argument("version", type=str)
+  p.add_argument("-p", "--prerelease", action="store_true")
+  a = p.parse_args()
+  build(a.version, "prerelease" if a.prerelease else "release")
