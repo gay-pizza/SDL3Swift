@@ -51,6 +51,8 @@
 #define SDL_WINDOW_POPUP_MENU 0x0000000000080000ul  /**< window should be treated as a popup menu, requires a parent window */
 #undef SDL_WINDOW_KEYBOARD_GRABBED
 #define SDL_WINDOW_KEYBOARD_GRABBED 0x0000000000100000ul  /**< window has grabbed keyboard input */
+#undef SDL_WINDOW_FILL_DOCUMENT
+#define SDL_WINDOW_FILL_DOCUMENT 0x0000000000200000ul  /**< window is in fill-document mode (Emscripten only), since SDL 3.4.0 */
 #undef SDL_WINDOW_VULKAN
 #define SDL_WINDOW_VULKAN 0x0000000010000000ul  /**< window usable for Vulkan surface */
 #undef SDL_WINDOW_METAL
