@@ -3,6 +3,7 @@ name: Swift Package
 on:
   push:
     paths:
+    - ".github/workflows/spm.yml"
     - "Package.swift"
     - "**.swift"
     - "Sources/CSDL3/**"
@@ -10,6 +11,7 @@ on:
   pull_request:
     branches: [ "main" ]
     paths:
+    - ".github/workflows/spm.yml"
     - "Package.swift"
     - "**.swift"
     - "Sources/CSDL3/**"
@@ -36,20 +38,16 @@ jobs:
 
     - name: Build & install SDL3 (Ubuntu)
       if: ${{ startsWith(matrix.os, 'ubuntu') }}
-      run: |
-        sudo apt-get install -y libasound2-dev libpulse-dev libaudio-dev libjack-dev libsndio-dev libx11-dev \
-          libxext-dev libxrandr-dev libxcursor-dev libxfixes-dev libxi-dev libxss-dev libxtst-dev libxkbcommon-dev \
-          libdrm-dev libgbm-dev libgl1-mesa-dev libgles2-mesa-dev libegl1-mesa-dev libdbus-1-dev libibus-1.0-dev \
-          libudev-dev libpipewire-0.3-dev libwayland-dev libdecor-0-dev liburing-dev
-        curl -L -o sdl3.tar.gz "$(curl -s https://api.github.com/repos/libsdl-org/SDL/releases/latest | \
-          jq -r '[.assets[] | select(.name | match("tar.gz$")) | .browser_download_url][0]')"
-        tar -xf sdl3.tar.gz --transform 's/^SDL3-[0-9\.]*/sdl3-src/'
-        cmake -Bsdl3-build -GNinja -DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo -S sdl3-src
-        cmake --build sdl3-build
-        sudo cmake --install sdl3-build --prefix /usr
+      uses: libsdl-org/setup-sdl@4ebea449684c989388fe6bcea0460e300d13a5ae
+      with:
+        install-linux-dependencies: true
+        version: sdl3-latest
+        cmake-generator: Ninja
 
     - name: Build
       run: swift build
 
     - name: Run tests
+      # Tests are broken with setup-sdl because of course they are
+      if: ${{ ! startsWith(matrix.os, 'ubuntu') }}
       run: swift test
