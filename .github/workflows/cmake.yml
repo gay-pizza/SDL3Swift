@@ -30,13 +30,18 @@ jobs:
         os:
         - macos-latest
         - ubuntu-latest
+        - windows-latest
 
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v4
 
+    - name: Install Swift (Windows)
+      if: ${{ startsWith(matrix.os, 'windows') }}
+      uses: SwiftyLab/setup-swift@latest
+
     - name: Build & install SDL3 (Ubuntu)
-      if: ${{ startsWith(matrix.os, 'ubuntu') }}
+      if: ${{ ! startsWith(matrix.os, 'macos') }}
       uses: libsdl-org/setup-sdl@4ebea449684c989388fe6bcea0460e300d13a5ae
       with:
         install-linux-dependencies: true
